@@ -5,12 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Create an account</h1>
-<p>Please, sign up using the following form:</p>
-<form action="." method="post">
-    {{ user_form.as_p }}
-    {% csrf_token %}
-    <p><input type="submit" value="Create my account"></p>
+<h2>Регистрация</h2>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Отправить</button>
 </form>
 </body>
 </html>
